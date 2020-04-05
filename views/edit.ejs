@@ -1,0 +1,31 @@
+<%- include('layouts/header.ejs'); -%>
+
+
+<div class="card">
+    <div class="card-body">
+        <form action="<%= '/' + post.id %> " method="POST">
+            <fieldset>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Address"
+                        value=" <%= post.address %> ">
+                </div>
+                <div class=" form-group">
+                    <label for="No Handphone">No Handphone</label>
+                    <input type="text" class="form-control" id="nohandphone" placeholder="No Handphone"
+                        name="nohandphone" value="<%= post.nohandphone %>">
+                </div>
+                <div class=" form-group">
+                    <label for="role">Role</label>
+                    <select class="form-control" id="role" name="role">
+                        <option hidden><%= post.role %></option>
+                        <option> Student</option>
+                        <option>Teacher</option>
+                        <option>Customer</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-warning">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
